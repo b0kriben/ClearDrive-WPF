@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pd+I2vtcXAMvPD5e5KkWtvO36Hk440U4YAFOpGwOet9EJrfDhiMtDL/3eArTm1GEwiTMJfSM8XDXfWrS+vD7Bw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Vasvári 13.b\\CAS\\ClearDrive-WPF\\ClearDive.desktop\\ClearDive.desktop\\ClearDive.desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\extended.wpf.toolkit\\4.6.1\\extended.wpf.toolkit.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}
