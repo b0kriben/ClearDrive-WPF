@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 //using ClearDive.viewmodel;
+//using System.Text.Json;
 
 namespace ClearDive.desktop
 {
@@ -18,16 +19,16 @@ namespace ClearDive.desktop
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly HttpClient _httpClient;
+        //private readonly HttpClient _httpClient;
 
         public MainWindow()
         {
             InitializeComponent();
             //this.DataContext = new MainViewModel();
-            _httpClient = new HttpClient();
+            //_httpClient = new HttpClient();
         }
 
-        private async Task GetDataFromApi()
+        /*private async Task GetDataFromApi()
         {
             try
             {
@@ -64,6 +65,6 @@ namespace ClearDive.desktop
         private async void OnButtonClick(object sender, RoutedEventArgs e)
         {
             await GetDataFromApi();
-        }
+        }*/
     }
 }

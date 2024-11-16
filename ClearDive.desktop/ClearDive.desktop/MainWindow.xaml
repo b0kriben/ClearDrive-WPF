@@ -52,12 +52,12 @@
 
         <!-- Dátum megadása -->
         <Label Content="_Bejelentés ideje" Target="{Binding ElementName=txtTime}" Grid.Column="0" Grid.Row="3"/>
-        <!-- <DatePicker x:Name="txtElapsedTime"
-         SelectedDate="{Binding SelectedStudent.BirthDay}"
-         Grid.Column="1" Grid.Row="3" /> -->
-        <TextBox x:Name="txtTime" 
+        <DatePicker x:Name="txtTime" 
+         SelectedDate="{Binding TimeCalculation.CurrentDate}"
+         Grid.Column="1" Grid.Row="3" />
+        <!-- <TextBox x:Name="txtTime" 
          Text="{Binding TimeCalculation, UpdateSourceTrigger=PropertyChanged}" 
-         Grid.Column="1" Grid.Row="3"/>
+         Grid.Column="1" Grid.Row="3"/> -->
 
         <Label Content="_Eltelt idő" Target="{Binding ElementName=txtElapsedTime}" Grid.Column="0" Grid.Row="4"/>
         <TextBox x:Name="txtElapsedTime" 
