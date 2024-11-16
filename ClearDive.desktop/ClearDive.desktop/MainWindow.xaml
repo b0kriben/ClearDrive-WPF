@@ -25,9 +25,11 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -48,17 +50,24 @@
          Text="{Binding GivenName, UpdateSourceTrigger=PropertyChanged}" 
          Grid.Column="1" Grid.Row="1"/>
 
+        <!-- Dátum megadása -->
+        <Label Content="_Bejelentés ideje" Target="{Binding ElementName=txtTime}" Grid.Column="0" Grid.Row="3"/>
+        <!-- <DatePicker x:Name="txtElapsedTime"
+         SelectedDate="{Binding SelectedStudent.BirthDay}"
+         Grid.Column="1" Grid.Row="3" /> -->
+        <TextBox x:Name="txtTime" 
+         Text="{Binding TimeCalculation, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="3"/>
 
         <Label Content="_Eltelt idő" Target="{Binding ElementName=txtElapsedTime}" Grid.Column="0" Grid.Row="4"/>
         <TextBox x:Name="txtElapsedTime" 
          Text="{Binding ElapsedTime, UpdateSourceTrigger=PropertyChanged}" 
          Grid.Column="1" Grid.Row="4"/>
 
-
-        <Label Content="_Bejelentés ideje" Target="{Binding ElementName=txtTime}" Grid.Column="0" Grid.Row="3"/>
-        <TextBox x:Name="txtTime" 
-         Text="{Binding TimeCalculation, UpdateSourceTrigger=PropertyChanged}" 
-         Grid.Column="1" Grid.Row="3"/>
-
+        <Label Content="_Kimenet" Target="{Binding ElementName=txOutput}" Grid.Column="0" Grid.Row="5" />
+        <TextBox x:Name="txtOutput" 
+         Text="{Binding Path=Output}" 
+         IsReadOnly="True" 
+         Grid.Column="1" Grid.Row="5"/>
     </Grid>
 </Window>

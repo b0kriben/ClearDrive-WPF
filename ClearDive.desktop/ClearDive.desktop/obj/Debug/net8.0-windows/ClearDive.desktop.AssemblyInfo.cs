@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClearDive.desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4cd3d90f14333d07766980554e182d4ad41728f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClearDive.desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClearDive.desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
