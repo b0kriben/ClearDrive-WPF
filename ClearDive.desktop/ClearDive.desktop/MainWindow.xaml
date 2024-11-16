@@ -6,8 +6,59 @@
         xmlns:local="clr-namespace:ClearDive.desktop"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <!--xmlns:viewmodel="clr-namespace:cleardrive.viewmodel;assembly=cleardrive.viewmodel"-->
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="120"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="_Bejelentés típusa" Grid.Column="0" Grid.Row="0"/>
+        <ComboBox x:Name="cboxBejelent"
+          ItemsSource="{Binding AkadalyList}" 
+          SelectedItem="{Binding KijeloltElem, Mode=TwoWay}" 
+          Grid.Column="1" Grid.Row="0" Height="20" Width="120"/>
+
+
+        <Label Content="_Név" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="txtNev" 
+         Text="{Binding Elnevezes, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="1"/>
+
+
+        <Label Content="_Eltelt ido" Grid.Column="0" Grid.Row="4"/>
+        <TextBox x:Name="txtElteltIdo" 
+         Text="{Binding ElteltIdo, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="4"/>
+
+
+        <Label Content="_Bejelentés ideje" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="txtIdo" 
+         Text="{Binding IdoSzamitas, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="3"/>
 
     </Grid>
 </Window>
