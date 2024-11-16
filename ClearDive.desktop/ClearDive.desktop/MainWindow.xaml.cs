@@ -19,6 +19,7 @@ namespace ClearDive.desktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        //private static readonly HttpClient client = new HttpClient();
         //private readonly HttpClient _httpClient;
 
         public MainWindow()
@@ -27,6 +28,33 @@ namespace ClearDive.desktop
             //this.DataContext = new MainViewModel();
             //_httpClient = new HttpClient();
         }
+
+        /*private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var response = await GetItemsFromApi();
+            MessageBox.Show(response);
+        }
+
+        private async Task<string> GetItemsFromApi()
+        {
+            try
+            {
+                // A backend API elérési URL-je
+                string apiUrl = "http://localhost:5000/api/items";
+
+                // GET kérés küldése
+                var response = await client.GetStringAsync(apiUrl);
+                return response;
+            }
+            catch (HttpRequestException ex)
+            {
+                return "Hiba történt: " + ex.Message;
+            }
+        }*/
+
+
+
+
 
         /*private async Task GetDataFromApi()
         {
