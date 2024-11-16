@@ -1,0 +1,74 @@
+﻿<Window x:Class="cleardrive.desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cleardrive.desktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--xmlns:viewmodel="clr-namespace:cleardrive.viewmodel;assembly=cleardrive.viewmodel"-->
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="120"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="_Bejelentés típusa" Target="{Binding ElementName=cboxAnnounced}" Grid.Column="0" Grid.Row="0"/>
+        <ComboBox x:Name="cboxAnnounced"
+         ItemsSource="{Binding ObstacleList}" 
+         SelectedItem="{Binding DesignedItem, Mode=TwoWay}" 
+         Grid.Column="1" Grid.Row="0" Height="20" Width="120"/>
+
+
+        <Label Content="_Név" Target="{Binding ElementName=txtName}" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="txtName" 
+         Text="{Binding GivenName, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="1"/>
+
+        <!-- Dátum megadása -->
+        <Label Content="_Bejelentés ideje" Target="{Binding ElementName=txtTime}" Grid.Column="0" Grid.Row="3"/>
+        <DatePicker x:Name="txtTime" 
+         SelectedDate="{Binding TimeCalculation.CurrentDate}"
+         Grid.Column="1" Grid.Row="3" />
+        <!-- <TextBox x:Name="txtTime" 
+         Text="{Binding TimeCalculation, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="3"/> -->
+
+        <Label Content="_Eltelt idő" Target="{Binding ElementName=txtElapsedTime}" Grid.Column="0" Grid.Row="4"/>
+        <TextBox x:Name="txtElapsedTime" 
+         Text="{Binding ElapsedTime, UpdateSourceTrigger=PropertyChanged}" 
+         Grid.Column="1" Grid.Row="4"/>
+
+        <Label Content="_Kimenet" Target="{Binding ElementName=txOutput}" Grid.Column="0" Grid.Row="5" />
+        <TextBox x:Name="txtOutput" 
+         Text="{Binding Path=Output}" 
+         IsReadOnly="True" 
+         Grid.Column="1" Grid.Row="5"/>
+
+    </Grid>
+</Window>
